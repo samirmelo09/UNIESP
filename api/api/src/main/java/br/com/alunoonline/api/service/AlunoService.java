@@ -16,7 +16,8 @@ public class AlunoService {
     @Autowired
     AlunoRepository repository;
 
-    public void create(Aluno aluno) { repository.save(aluno); }
+    public void create(Aluno aluno) {
+        repository.save(aluno); }
 
     public List<Aluno> findAll() {
         return repository.findAll();

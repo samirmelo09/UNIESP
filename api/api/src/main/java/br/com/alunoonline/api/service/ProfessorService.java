@@ -16,7 +16,8 @@ public class ProfessorService {
     @Autowired
     ProfessorRepository repository;
 
-    public void create(Professor professor) { repository.save(professor); }
+    public void create(Professor professor) {
+        repository.save(professor); }
 
     public List<Professor> findAll() {
         return repository.findAll();
