@@ -19,6 +19,23 @@ public class AlunoService {
     public void create(Aluno aluno) {
         repository.save(aluno); }
 
+    public Aluno buscarPorEmail(String email){
+        return repository.findByEmail(email);
+    }
+
+    public Aluno buscarPorEmailJPQL(String email){
+        return repository.buscarPorEmail(email);
+    }
+
+    public List<Aluno> listarTodosOrdenadoPorNome(){
+        return repository.listarTodosAlunosOrdenadoPorNome();
+    }
+
+    public Aluno buscarPorNomeEmail(String nome, String email){
+        return repository.findByNomeAndEmail(nome, email);
+    }
+
+
     public List<Aluno> findAll() {
         return repository.findAll();
     }
